@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* @import "skeleton.scss"; */
+
+    h2:empty, h3:empty, .h4:empty, h5:empty, p:empty, a:empty, img:empty {
+        animation: loading 1.7s infinite linear;
+        background: #f2f3f5;
+        background-image: -webkit-linear-gradient(to right, #f2f3f5 0%, #ffffff 20%, #f2f3f5 40%, #f2f3f5 100%);
+        background-image: linear-gradient(to right, #f2f3f5 0%, #ffffff 20%, #f2f3f5 40%, #f2f3f5 100%);
+        background-repeat: no-repeat;
+      }
+      ul.user-nav li .link-desc-skel{
+        background: #fff;
+        border-bottom: 5px solid #f2f3f5;
+        padding: 10px;
+        margin-bottom: 30px;
+        -o-transition: .5s;
+        -ms-transition: .5s;
+        -moz-transition: .5s;
+        -webkit-transition: .5s;
+        transition: .5s;
+      }
+
+      img:empty.card-img-top{
+        height: 189.75px;
+      }
+      
+      h2:empty{
+        height: 38px;
+        width: 200px;
+      }
+
+      h3:empty {
+        height: 22px;
+        width: 200px;
+      }
+      h5:empty{
+        height: 30px;
+        width: 200px;
+      }
+    
+      a:empty{
+          width: 100px;
+          height: 40px;
+          border: 0;
+      }
+      h4:empty {
+        height: 18px;
+        width: 200px;
+      }
+    
+      p:empty {
+        height: 18px;
+        width: 200px;
+      } 
+      p:empty.lead {
+        height: 30px;
+        width: 200px;
+      }
+  @keyframes loading {
+    0% {
+      background-position: -100px;
+    }
+  
+    100% {
+  background-position: 200px;
+    }
+  }
