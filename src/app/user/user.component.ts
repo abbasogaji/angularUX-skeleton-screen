@@ -1,19 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from './user.services';
 
 @Component({
   selector: 'app-user',
   templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  styleUrls: ['./user.component.css'],
+  providers: [UserService]
 })
 
 export class UserComponent implements OnInit {
   dataLoaded = false;
-  constructor() { }
+  repodata : []
+  user : {name : string, email: string} = {name : null, email : null }
+  constructor(private userService : UserService) { 
+    
+  }
 
   ngOnInit() {
-    setTimeout( () => {
-        this.dataLoaded = true;
-    }, 2000)
+    this.userService.fetchData().subscribe((res : {userdata : {name : string, email: string}, repodata:[]}) => {
+      this.repodata = res.repodata;
+      this.user = res.userdata;
+      this.dataLoaded = true;
+    })
   }
 
 }
