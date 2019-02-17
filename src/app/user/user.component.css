@@ -67,3 +67,25 @@
   background-position: 200px;
     }
   }
+  @media (max-width: 576px) { 
+    .sm-text-center {
+        text-align: center;
+    }
+     h5:empty{
+        width: 400px;
+      }
+      p:empty.card-text{
+        width: 400px;
+      }
+    .sm-mr-auto{margin-right:auto!important}
+    .sm-ml-auto{margin-left:auto!important}
+   }
+   @media (max-width: 420px) { 
+   .col-xxs-12{-webkit-box-flex:0;-ms-flex:0 0 100%;flex:0 0 100%;max-width:100%}
+    h5:empty{
+        width: 300px;
+      }
+      p:empty.card-text{
+        width: 300px;
+      }
+   }

@@ -12,7 +12,7 @@ export class UserService {
   fetchData(){
     setTimeout(() => {
         this.obs.next({userdata : this.userdata, repodata : this.repodata });
-    }, 5000)
+    }, 2000)
     return this.obs;
   }
 }

@@ -1,12 +1,12 @@
 <section *ngIf="dataLoaded; else skeleton">
     <main class="container mt-2">
-        <div class="row">
-            <div class="col-lg-2 col p-2">
+        <div class="row"  [@fadeIn]>
+            <div class="col-4 col-lg-2 p-2">
                 <div class="user-img m-2 mr-auto ml-auto">    
                     <img src="/assets/img/profile.png" class="img-fluid rounded-circle" alt="profile pic">
                 </div>
             </div>
-            <div class="col-lg-10 pt-3">
+            <div class="col-8 col-lg-10 pt-3 sm-text-center">
                 <h2 class="display-5 text-capitalize">{{ user.name }}</h2>
                 <p class="lead">{{ user.email }}</p>
                 <a href="#" class="btn btn-primary mr-1">Edit Profile</a><a href="#" class="btn btn-secondary">Settings</a>
@@ -14,9 +14,9 @@
         </div>
       </main>
       <section>
-        <div class="pt-2 pb-4 text-center"><h5>My Repository</h5></div>
+        <div class="mt-4 pb-1 text-center"><h5>My Repository</h5></div>
         <div class="container">
-            <div class="row">
+            <div class="row" [@fadeIn]>
                 <div class="col-lg-3 col-md-4 mb-4" *ngFor="let repo of repodata">
                         <div class="card ">
                             <img class="card-img-top" src="{{ repo.imageUrl }}">
@@ -38,14 +38,14 @@
 <ng-template #skeleton>
     <main class="container mt-2">
         <div class="row">
-            <div class="col-lg-2 col p-2">
+            <div class="col-4 col-lg-2 p-2">
                 <div class="user-img m-2 mr-auto ml-auto">    
                     <img src="/assets/img/user.svg" class="img-fluid rounded-circle">
                 </div>
             </div>
-            <div class="col-lg-10 pt-3">
-                <h2 class="display-5 text-capitalize"></h2>
-                <p class="lead"></p>
+            <div class="col-8 col-lg-10 pt-3 sm-text-center">
+                <h2 class="display-5 text-capitalize sm-mr-auto sm-ml-auto"></h2>
+                <p class="lead sm-mr-auto sm-ml-auto"></p>
                 <a href="#" class="btn btn-secondary mr-1"></a><a href="#" class="btn btn-secondary"></a>
             </div>
         </div>
